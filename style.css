@@ -634,3 +634,60 @@ body {
     color: #334155 !important; /* Okuması kolay net gri/siyah tonu */
     line-height: 1.7 !important;
 }
+/* ==========================================================================
+   📱 HAKKIMIZDA (KURUMSAL) SAYFASI MOBİL UYUM KODLARI
+   ========================================================================== */
+
+/* Ekran genişliği 768px ve daha küçük olduğunda (Telefon modunda) devreye girsin */
+@media (max-width: 768px) {
+    
+    /* 1. Üstteki Koyu Hakkımızda Şeridini Mobile Göre Küçültüyoruz */
+    .about-hero {
+        padding: 40px 15px !important;
+    }
+
+    .about-hero-content h2 {
+        font-size: 26px !important; /* Mobilde yazı dev gibi kalmasın */
+    }
+
+    .about-hero-content p {
+        font-size: 13.5px !important;
+    }
+
+    /* 2. Metin ve Resim Alanını Yan Yana Düzeninden Alt Alta Düzenine Alıyoruz */
+    .about-wrapper {
+        flex-direction: column !important; /* Sihirli kod: Elemanları alt alta dizer */
+        gap: 25px !important; /* Aralarındaki boşluğu telefona göre daraltır */
+        padding: 0 15px !important;
+    }
+
+    /* Sol taraftaki metin alanını tam genişlik yap */
+    .about-left {
+        width: 100% !important;
+    }
+
+    .about-left h3 {
+        font-size: 20px !important;
+        margin-bottom: 12px !important;
+        text-align: center; /* Telefon ekranında başlığı ortala */
+    }
+
+    .about-left p {
+        font-size: 14px !important; /* Telefonda okuması daha rahat bir boyuta çektik */
+        line-height: 1.6 !important;
+        text-align: justify; /* Yazıyı sağa sola yasla ki dağınık durmasın */
+    }
+
+    /* Sağ taraftaki resim alanını tam genişlik yap */
+    .about-right {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    /* Resmin mobilde aşırı uzamaması ve ekrana tam oturması için */
+    .about-side-img {
+        max-height: 250px !important;
+        object-fit: cover; /* Resmi ezmeden, kutunun içine şıkça sığdırır */
+        border-radius: 8px !important;
+    }
+}
