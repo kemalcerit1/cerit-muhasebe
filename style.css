@@ -554,12 +554,7 @@ body {
     }
 }
 /* Koyu Başlık Alanı Yenilenen Renk Ayarı */
-.about-hero {
-    background: linear-gradient(135px, #1e293b 0%, #0f172a 100%); /* Tam kurumsal, göz yormayan derin lacivert şerit */
-    padding: 60px 20px;
-    text-align: center;
-    color: #ffffff;
-    border-bottom: 3px solid #4f46e5; /* İnce asil alt çizgi */
+
 }
 /* ==========================================================================
    🎨 HAKKIMIZDA ALT ALAN ARKA PLAN DEĞİŞİMİ
@@ -567,11 +562,7 @@ body {
 
 /* Tarihçemiz metni ve resminin olduğu tüm bölümün arka planını 
    bembeyaz olmaktan kurtarıp, şık ve hafif bir gri tonuna çekiyoruz */
-.about-container {
-    max-width: 100%; /* Arka plan renginin tüm ekranı kaplaması için genişlettik */
-    background-color: #f8fafc; /* Tam aradığın o elit, göz yormayan soft kurumsal gri/kırık beyaz */
-    margin: 0 auto; /* Sayfayı ortala */
-    padding: 60px 20px; /* İçeriden şık bir boşluk */
+
 }
 
 /* İçerideki metin ve resim alanının genişliğini korumak için */
@@ -587,4 +578,59 @@ body {
 .about-left p {
     color: #334155; /* Yazı rengini biraz daha netleştirdik */
     line-height: 1.8;
+}
+/* ==========================================================================
+   🛠️ HAKKIMIZDA SAYFASI KESİN VE NET ÇÖZÜMÜ
+   ========================================================================== */
+
+/* 1. Üstteki Hakkımızda Şeridi - Rengini Koyu Yapıyoruz ki Yazı Okunsun */
+.about-hero {
+    background: #1e293b !important; /* Net kurumsal koyu antrasit/lacivert şerit */
+    padding: 50px 20px !important;
+    text-align: center !important;
+    border-bottom: 3px solid #6366f1 !important; /* Alta asil mor çizgi */
+}
+
+/* Hakkımızda yazısının kendisi parlasın */
+.about-hero-content h2 {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important; /* Yazı bembeyaz ve net olsun */
+    margin-bottom: 10px !important;
+}
+
+/* Altındaki küçük açıklama yazısı */
+.about-hero-content p {
+    font-size: 15px !important;
+    color: #94a3b8 !important; /* Hafif soft gri yazı */
+}
+
+/* 2. Alttaki Tarihçemiz Alanı - Bembeyazlıktan Kurtarıp Hafif Gri Yapıyoruz */
+.about-container {
+    background-color: #f8fafc !important; /* Aradığın o soft kurumsal kırık beyaz/gri */
+    padding: 60px 0 !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+/* İçerideki metin ve resmin hizası bozulmasın */
+.about-wrapper {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    gap: 50px !important;
+    align-items: center !important;
+    padding: 0 20px !important;
+}
+
+.about-left h3 {
+    font-size: 24px !important;
+    color: #1e1b4b !important; /* Başlık asil koyu lacivert */
+    margin-bottom: 20px !important;
+}
+
+.about-left p {
+    font-size: 15px !important;
+    color: #334155 !important; /* Okuması kolay net gri/siyah tonu */
+    line-height: 1.7 !important;
 }
