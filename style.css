@@ -219,3 +219,30 @@ body {
     width: auto;  /* Oranının bozulmaması için otomatik genişlik */
     object-fit: contain;
 }
+/* --- SMMM Logo ve Sol Menü Düzenlemesi --- */
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start; /* İçindeki elemanları tamamen sola yaslar */
+    align-items: center;
+    padding: 15px 20px;
+    gap: 50px; /* Logo ile Menü linkleri arasındaki şık boşluk */
+}
+
+.office-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.smmm-img-logo {
+    height: 60px; /* Logonun boyutu ideal seviyeye çekildi */
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px; /* Menü elemanlarının kendi arasındaki boşluk */
+}
