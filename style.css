@@ -246,3 +246,144 @@ body {
     display: flex;
     gap: 25px; /* Menü elemanlarının kendi arasındaki boşluk */
 }
+/* ==========================================================================
+   💼 HİZMETLERİMİZ SAYFASI PREMİUM STİLLERİ
+   ========================================================================== */
+.services-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px 60px 20px;
+}
+
+.services-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-intro h2 {
+    font-size: 30px;
+    color: #1e1b4b;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.services-intro p {
+    color: #64748b;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Hizmetler Grid Yapısı */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Yan yana 2 büyük kategori kutusu */
+    gap: 30px;
+}
+
+.service-category-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Kategori Başlığı */
+.category-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e1b4b;
+    border-bottom: 2px solid #6366f1; /* Mor/İndigo alt çizgi */
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-title i {
+    color: #6366f1;
+    font-size: 20px;
+}
+
+/* Listenin Maddeleri */
+.service-list {
+    list-style: none;
+}
+
+.service-list li {
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.6;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-list li:last-child {
+    border-bottom: none;
+}
+
+/* Maddelerin soluna şık küçük nokta simgesi */
+.service-list li::before {
+    content: "•";
+    color: #6366f1;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+
+/* Outsourcing alanını tam genişlik yapalım */
+.single-wide {
+    grid-column: span 2;
+    background: #fdfdfd;
+    border: 1px dashed #6366f1;
+}
+
+.outsourcing-box p {
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 15px;
+}
+
+.out-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* İçi 3 sütun olsun */
+    gap: 15px;
+}
+
+.out-grid span {
+    font-size: 14px;
+    color: #475569;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.out-grid span i {
+    color: #10b981; /* Yeşil check simgeleri */
+}
+
+/* 📱 Hizmetler Sayfası Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Mobilde her şey alt alta tek sütun */
+    }
+    .single-wide {
+        grid-column: span 1;
+    }
+    .out-grid {
+        grid-template-columns: 1fr; /* Outsourcing de mobilde tek satıra düşer */
+    }
+}
