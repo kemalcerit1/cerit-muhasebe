@@ -387,3 +387,76 @@ body {
         grid-template-columns: 1fr; /* Outsourcing de mobilde tek satıra düşer */
     }
 }
+/* ==========================================================================
+   🖼️ GÖRSELDEKİ KLASİK HİZMETLER DÜZENİ (SOL METİN - SAĞ RESİM)
+   ========================================================================== */
+.classic-services-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px 60px 20px;
+    background-color: #ffffff; /* Görseldeki gibi temiz beyaz arka plan */
+}
+
+/* Üstteki Başlık Stili */
+.section-main-title {
+    font-size: 26px;
+    color: #4f46e5; /* Görseldeki o tatlı mor/mavi başlık rengi */
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-family: Arial, sans-serif;
+}
+
+/* İkili Düzen Taşıyıcısı */
+.classic-services-wrapper {
+    display: flex;
+    gap: 40px; /* Resim ile metin arasındaki boşluk */
+    align-items: flex-start;
+}
+
+/* Sol Taraf (Yazılar) genişliği */
+.classic-services-left {
+    flex: 1;
+}
+
+.intro-paragraph {
+    font-size: 15px;
+    color: #1e293b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Görseldeki Siyah Noktalı Liste */
+.classic-bullet-list {
+    list-style-type: disc; /* Tam olarak görseldeki siyah yuvarlak noktalar */
+    padding-left: 20px;
+}
+
+.classic-bullet-list li {
+    font-size: 14.5px;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 12px; /* Maddeler arası boşluk */
+}
+
+/* Sağ Taraf (Resim) Genişliği ve Şıklığı */
+.classic-services-right {
+    flex: 0 0 45%; /* Ekranın %45'ini resme ayırıyoruz */
+}
+
+.side-services-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px; /* Hafif yuvarlatılmış köşeler */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Hafif gölge efekti */
+}
+
+/* 📱 Mobilde her şeyin alt alta gelmesi için kural */
+@media (max-width: 900px) {
+    .classic-services-wrapper {
+        flex-direction: column-reverse; /* Mobilde resim alta geçsin, yazılar üstte kalsın */
+    }
+    .classic-services-right {
+        width: 100%;
+    }
+}
