@@ -553,3 +553,11 @@ body {
         font-size: 26px;
     }
 }
+/* Koyu Başlık Alanı Yenilenen Renk Ayarı */
+.about-hero {
+    background: linear-gradient(135px, #1e293b 0%, #0f172a 100%); /* Tam kurumsal, göz yormayan derin lacivert şerit */
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 3px solid #4f46e5; /* İnce asil alt çizgi */
+}
