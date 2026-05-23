@@ -691,3 +691,87 @@ body {
         border-radius: 8px !important;
     }
 }
+/* ==========================================================================
+   🍔 MOBİL YANDAN AÇILIR MENÜ (HAMBURGER) STİLLERİ
+   ========================================================================== */
+
+/* Bilgisayar ekranlarında bu mobil butonları gizle */
+.menu-checkbox, .hamburger-btn {
+    display: none;
+}
+
+/* Sadece Telefon Modunda (768px ve altı) devreye girecek kurallar */
+@media (max-width: 768px) {
+    
+    .navbar-container {
+        justify-content: space-between !important; /* Logo sola, üç çizgi sağa yaslansın */
+        padding: 15px 20px !important;
+        gap: 0 !important;
+    }
+
+    /* Üç Çizgi Butonunun Stili */
+    .hamburger-btn {
+        display: block; /* Mobilde görünür yap */
+        font-size: 24px;
+        color: #1e1b4b;
+        cursor: pointer;
+        z-index: 100; /* Her şeyin üstünde dursun */
+        transition: transform 0.3s;
+    }
+
+    /* Çarpı (Kapatma) ikonunu ilk başta gizle */
+    .hamburger-btn .close-icon {
+        display: none;
+    }
+
+    /* YANDAN AÇILACAK PANELİN TASARIMI */
+    .nav-menu {
+        position: fixed !important;
+        top: 0;
+        right: -280px; /* İlk başta ekranın sağında gizli (görünmez) duracak */
+        width: 280px; /* Menünün genişliği */
+        height: 100vh; /* Tüm ekran yüksekliği kaplasın */
+        background-color: #1e1b4b; /* Asil koyu lacivert arka plan */
+        flex-direction: column !important; /* Linkleri yukarıdan aşağıya diz */
+        padding: 80px 30px 30px 30px !important;
+        gap: 20px !important;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out !important; /* Yağ gibi kayarak açılma efekti */
+        z-index: 90;
+    }
+
+    /* Mobil panelin içindeki linklerin rengi ve stili */
+    .menu-item {
+        color: #e2e8f0 !important;
+        font-size: 16px !important;
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .menu-item::after {
+        display: none; /* Mobilde alt çizgiyi kaldırıyoruz */
+    }
+
+    .menu-item:hover, .menu-item.active {
+        color: #6366f1 !important; /* Aktif link mor parlasın */
+        padding-left: 5px;
+    }
+
+    /* SİHİRLİ TETİKLEME ANLARI (Checkbox Hack) */
+    
+    /* Üç çizgiye basıldığında (checkbox seçildiğinde) MENÜYÜ EKRANA KAYDIR */
+    .menu-checkbox:checked ~ .nav-menu {
+        right: 0 !important; /* Menüyü sağ köşeye sıfırla, yani ekrana getir! */
+    }
+
+    /* Menü açıldığında üç çizgiyi gizle, ÇARPI (X) ikonunu göster */
+    .menu-checkbox:checked ~ .hamburger-btn .open-icon {
+        display: none;
+    }
+    .menu-checkbox:checked ~ .hamburger-btn .close-icon {
+        display: block;
+        color: #ffffff; /* Panel koyu olduğu için çarpı beyaz olsun */
+    }
+}
