@@ -561,3 +561,30 @@ body {
     color: #ffffff;
     border-bottom: 3px solid #4f46e5; /* İnce asil alt çizgi */
 }
+/* ==========================================================================
+   🎨 HAKKIMIZDA ALT ALAN ARKA PLAN DEĞİŞİMİ
+   ========================================================================== */
+
+/* Tarihçemiz metni ve resminin olduğu tüm bölümün arka planını 
+   bembeyaz olmaktan kurtarıp, şık ve hafif bir gri tonuna çekiyoruz */
+.about-container {
+    max-width: 100%; /* Arka plan renginin tüm ekranı kaplaması için genişlettik */
+    background-color: #f8fafc; /* Tam aradığın o elit, göz yormayan soft kurumsal gri/kırık beyaz */
+    margin: 0 auto; /* Sayfayı ortala */
+    padding: 60px 20px; /* İçeriden şık bir boşluk */
+}
+
+/* İçerideki metin ve resim alanının genişliğini korumak için */
+.about-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Beyaz arka planda kalan metin kutularını da bu yeni renge uyumlu yapalım */
+.about-left p {
+    color: #334155; /* Yazı rengini biraz daha netleştirdik */
+    line-height: 1.8;
+}
