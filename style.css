@@ -1,0 +1,209 @@
+/* --- GENEL AYARLAR --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+}
+
+/* ==========================================================================
+   ⬛ 1. ÜST KOYU ŞERİT (Top Bar) STİLLERİ
+   ========================================================================== */
+.top-bar {
+    background-color: #1e293b; /* Kurumsal koyu gri/antrasit */
+    color: #cbd5e1;
+    font-size: 13px;
+    padding: 10px 0;
+    border-bottom: 1px solid #334155;
+}
+
+.top-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-bar-info span {
+    margin-right: 25px;
+}
+
+.top-bar-info i {
+    color: #a855f7; /* İkonlara hafif şık bir mor dokunuş */
+    margin-right: 6px;
+}
+
+.top-bar-social a {
+    color: #cbd5e1;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.top-bar-social a:hover {
+    color: #a855f7;
+}
+
+/* ==========================================================================
+   🟪 2. ANA MENÜ (Navbar) STİLLERİ
+   ========================================================================== */
+.main-navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Ofis Logo Kısmı */
+.office-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e1b4b; /* Derin kurumsal lacivert */
+    letter-spacing: -0.5px;
+}
+
+.main-title span {
+    color: #6366f1; /* İsmin sonuna şık bir indigo vurgusu */
+}
+
+.sub-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+/* Menü Linkleri */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.menu-item:hover, .menu-item.active {
+    color: #1e1b4b; /* Üzerine gelince koyulaşsın */
+}
+
+/* Görseldeki gibi altına şık çizgi efekti (Hover line) */
+.menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #6366f1; /* Çizgi rengi */
+    transition: width 0.2s ease;
+}
+
+.menu-item:hover::after, .menu-item.active::after {
+    width: 100%; /* Aktifken veya hover olunca çizgi tam kaplasın */
+}
+
+/* ==========================================================================
+   🖼️ 3. HERO (Slogan ve Giriş) STİLLERİ
+   ========================================================================== */
+.office-hero {
+    position: relative;
+    height: 500px;
+    background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200'); /* Kurumsal ofis/analiz resmi */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Resmin üzerine karanlık filtre çekiyoruz ki yazılar parlasın */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 27, 75, 0.7); /* Lacivert tonlu transparan filtre */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h2 {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.hero-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #6366f1;
+    margin: 0 auto 25px auto;
+    border-radius: 2px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #e2e8f0;
+    margin-bottom: 35px;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #6366f1;
+    color: #ffffff;
+    padding: 14px 32px;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.hero-btn:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);
+}
