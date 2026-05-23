@@ -460,3 +460,96 @@ body {
         width: 100%;
     }
 }
+/* ==========================================================================
+   🎯 GÖRSELDEKİ HAKKIMIZDA & KURUMSAL SAYFASI STİLLERİ
+   ========================================================================== */
+
+/* Koyu Başlık Alanı (About Hero) */
+.about-hero {
+    background: linear-gradient(135px, #0f172a 0%, #1e1b4b 100%); /* Görseldeki o asil koyu geçişli arka plan */
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 4px solid #6366f1; /* Şık alt çizgi */
+}
+
+.about-hero-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+}
+
+.about-hero-divider {
+    width: 50px;
+    height: 3px;
+    background-color: #10b981; /* Görseldeki o yeşil/turkuaz ince alt çizgi efekti */
+    margin: 0 auto 15px auto;
+    border-radius: 2px;
+}
+
+.about-hero-content p {
+    font-size: 15px;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Alt İçerik Taşıyıcısı (Sol Metin - Sağ Resim) */
+.about-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px 60px 20px;
+}
+
+.about-wrapper {
+    display: flex;
+    gap: 50px; /* Metin ile resim arasındaki modern boşluk */
+    align-items: center;
+}
+
+/* Sol Taraf Metin Düzeni */
+.about-left {
+    flex: 1;
+}
+
+.about-left h3 {
+    font-size: 24px;
+    color: #1e1b4b;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-left p {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Sağ Taraf Resim Düzeni */
+.about-right {
+    flex: 0 0 45%; /* Resim alanına ekranın %45'i */
+}
+
+.about-side-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Görseldeki gibi şık yumuşatılmış köşeler */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* 📱 Hakkımızda Sayfası Mobil Uyumluluk */
+@media (max-width: 900px) {
+    .about-wrapper {
+        flex-direction: column; /* Mobilde her şey alt alta tek sütun olur */
+        gap: 30px;
+    }
+    .about-right {
+        width: 100%;
+    }
+    .about-hero-content h2 {
+        font-size: 26px;
+    }
+}
