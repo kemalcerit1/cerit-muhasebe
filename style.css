@@ -207,3 +207,15 @@ body {
     background-color: #4f46e5;
     transform: translateY(-2px);
 }
+/* --- SMMM LOGO AYARLARI --- */
+.office-logo {
+    display: flex;
+    align-items: center; /* Logoyu ve yanındaki yazıyı dikeyde tam ortalar */
+    gap: 15px; /* Amblem ile yazı arasındaki şık boşluk */
+}
+
+.smmm-img-logo {
+    height: 55px; /* Logonun yüksekliği (Kutuyu taşırmayacak şekilde ideal boyuttur) */
+    width: auto;  /* Oranının bozulmaması için otomatik genişlik */
+    object-fit: contain;
+}
